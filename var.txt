@@ -1,0 +1,3 @@
+!---?= $nome; ?---
+
+?= $nacionalidade; ? ?= $estado_civil; ? <?= $idade; ?> <?= $endereco; ?> <?= $celular; ?> <?= $email; ?>
