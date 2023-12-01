@@ -1,7 +1,7 @@
-<!---?php
+<?php
   session_start();
   include_once 'acoes/verifica-logado.php';
-?--->
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
  <head>
@@ -32,7 +32,7 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#"> <!---?= $_SESSION['nome'] ?---> </a>
+      <a class="navbar-brand" href="#"> <?= $_SESSION['nome'] ?> </a>
     </div>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="nav navbar-nav d-flex justify-content-end" id="links">
@@ -46,13 +46,13 @@
 <!-- container fluido 100% -->
 <div class="container-fluid bg2 text-center" id="div-cursos">
 
-  <!---?php include_once 'acoes/escreve-mensagem.php'; ?--->
+  <?php include_once 'acoes/escreve-mensagem.php'; ?>
 
   <h3> <i class="bi bi-book"></i> Cursos </h3>
   
   <ul class="list-group lista" style="color:#222;">
     <!-- CONSULTAR CURSOS DO USUARIO POR ID -->
-    <!---?php include_once 'acoes/consulta-cursos.php'; ?--->
+    <?php include_once 'acoes/consulta-cursos.php'; ?>
   </ul>
 
   <br>

@@ -1,4 +1,7 @@
-
+<?php
+  // INICIAR SESSÃO
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -10,7 +13,6 @@
 
     <title>Login</title>
 
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/geral.css" rel="stylesheet">
@@ -22,8 +24,9 @@
   <body class="text-center">
     
 <main class="form-signin">
-  <form action="#" method="POST">
+  <form action="acoes/login.php" method="POST">
 
+    <?php include_once 'acoes/escreve-mensagem.php' ?>
     
     <img src="images/favicon.png" alt="Logo" class="img-fluid" max-width="50px" />
 
