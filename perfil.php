@@ -1,9 +1,9 @@
-<!---?php
+<?php
   session_start();
   require_once 'acoes/verifica-logado.php';
   include_once 'acoes/consulta-usuario.php';
   
-?--->
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
  <head>
@@ -35,7 +35,7 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#"> <!---?= $nome; ?---> </a>
+      <a class="navbar-brand" href="#"> <?= $nome; ?> </a>
     </div>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="nav navbar-nav d-flex justify-content-end" id="links">
@@ -61,7 +61,7 @@
       <div class="col-sm-12">
         <label for="nome" class="form-label">Nome Completo</label>
         <input type="text" class="form-control" id="nome" name="nome" placeholder=""
-          value="" required>
+          value="<?= $nome; ?>" required>
         <div class="invalid-feedback">
           Digite o seu nome completo.
         </div>
@@ -70,7 +70,7 @@
       <div class="col-sm-12">
         <label for="nacionalidade" class="form-label">Nacionalidade</label>
         <input type="text" class="form-control" id="nacionalidade" name="nacionalidade" placeholder=""
-          value="" required>
+          value="<?= $nacionalidade; ?>" required>
         <div class="invalid-feedback">
           Digite a sua nacionalidade.
         </div>
@@ -80,7 +80,7 @@
         <label for="estado_civil" class="form-label">Estado Civil</label>
         <select class="form-select" id="estado_civil" name="estado_civil" required>
           <optgroup label="Dado anterior">
-            <option value=""><!---?= $estado_civil; ?---></option>
+            <option value="<?= $estado_civil; ?>"><?= $estado_civil; ?></option>
           </optgroup>
           <option value="Solteiro(a)">Solteiro(a)</option>
           <option value="Casado(a)">Casado(a)</option>
@@ -95,7 +95,7 @@
       <div class="col-md-12">
         <label for="idade" class="form-label">Idade</label>
         <input type="number" class="form-control" id="idade" name="idade" min="10" max="120" step="1"
-          value="" required>
+          value="<?= $idade; ?>" required>
         <div class="invalid-feedback">
           Informe a sua idade.
         </div>
@@ -104,7 +104,7 @@
       <div class="col-12">
         <label for="endereco" class="form-label">Endereço completo</label>
         <input type="text" class="form-control" id="endereco" name="endereco" placeholder=""
-        value="" required>
+        value="<?= $endereco; ?>" required>
         <div class="invalid-feedback">
           Digite o seu endereço completo, logradouro, nome, número e bairro.
         </div>
@@ -113,7 +113,7 @@
       <div class="col-md-12">
         <label for="celular" class="form-label">Celular</label>
         <input type="text" class="form-control" id="celular" name="celular" placeholder="(99) 99999-9999"
-          value="" required>
+          value="<?= $celular; ?>" required>
         <div class="invalid-feedback">
           Digite o número do seu celular com DDD.
         </div>
@@ -124,7 +124,7 @@
         <div class="input-group has-validation">
           <span class="input-group-text">@</span>
           <input type="text" class="form-control" id="email" name="email" placeholder="email@provedor.com"
-            value="" required>
+            value="<?= $email; ?>" required>
         <div class="invalid-feedback">
             Digite o seu e-mail.
           </div>

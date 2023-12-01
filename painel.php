@@ -1,3 +1,9 @@
+<!---?php
+    // INICIAR SESSÃO
+    session_start();
+    require_once 'acoes/verifica-logado.php';
+    require_once 'acoes/consulta-usuario.php'; // consulta para pegar dados do usuario logado
+?--->
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -5,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="images/favicon.png">
     <meta name="description" content="">
-    <meta name="author" content="Edson Maia">
+    <meta name="author" content="">
 
     <title>Currículo Online</title>
  
@@ -18,7 +24,7 @@
   </head>
   <body>
     
-<header>
+<header id="header">
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Currículo Online</a>
@@ -27,9 +33,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
-          </li>
+          <!---li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li--->
           <li class="nav-item">
             <a class="nav-link" href="perfil.php">Perfil</a>
           </li>
@@ -44,7 +50,8 @@
           </li>
 
         </ul>
-       
+        <img src="fotos/<?= $_SESSION['foto'] ?>" class="img-responsive img-redonda" style="display:inline" alt="Foto" width="25"> &nbsp; &nbsp;
+        <!---div class="dados-usuario"---> <!--?= $_SESSION['email']; ?---> <!--/div--->
         <a href="acoes/logout.php" class="btn btn-danger">Sair</a>
       </div>
     </div>
@@ -53,7 +60,7 @@
 
 <main>
   <div class="container-fluid"> <!-- div criada na parte 4 -->
-    
+    <?php include_once 'acoes/escreve-mensagem.php'; ?>
   </div>
   <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
@@ -136,11 +143,9 @@
     <!-- START THE FEATURETTES -->
     <hr class="featurette-divider">
 
-  <!-- FOOTER -->
-  <footer class="container">
-    <p class="float-end"><a href="#"><button class="btn btn-primary">Ir para o topo</button></a></p>
-    <p>&copy; 2023 UserRev &middot; <a href="#"><button class="btn btn-success">Privacidade</button></a> &middot; <a href="#"><button class="btn btn-success">Termos</button></a></p>
-  </footer>
+  <?php 
+  include'footer.php'
+  ?>
 </main>
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>

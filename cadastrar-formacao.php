@@ -1,9 +1,9 @@
-<!--?php
+<?php
   session_start();
   require_once 'acoes/verifica-logado.php';
   $id_logado    = $_SESSION['idusuario'];
   $email_logado = $_SESSION['email'];
-?--->
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
  <head>
